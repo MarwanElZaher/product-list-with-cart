@@ -1,0 +1,18 @@
+.product-head{
+    position:relative;
+}
+.add-to-cart-button{
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+}
+.product-category {
+    font-weight: 400;
+}
+.product-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+.product-price {
+    font-weight: 600;
+}
