@@ -4,6 +4,9 @@ import Product from '../Product/index'
 import "./style.css"
 const ProductList = () => {
     return (
+    <>
+        <p className="category">Desserts</p>
+        
         <div className="products-container">
             {data?.map(product => (
                 <li
@@ -18,7 +21,8 @@ const ProductList = () => {
                     />
                 </li>
         )) }
-        </div>
+            </div>
+         </>
     )
 }
 export default ProductList

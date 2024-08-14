@@ -1,6 +1,13 @@
 .products-container {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-};
+    list-style-type: none;
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+.category {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px
+}
