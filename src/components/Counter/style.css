@@ -1,0 +1,32 @@
+.counter-main-component {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -2%;
+    background-color: #c73b0f;
+    padding: 6px;
+    border-radius: 25px;
+    width: 60%
+}
+
+.counter-main-component button {
+display: flex;
+align-items: center;
+background-color: unset;
+border: unset;
+}
+.counter-main-component button svg{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.increment-quantity-button svg {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.decrement-quantity-button svg{
+padding: 9px 5px;
+border-radius: 30px;
+}
