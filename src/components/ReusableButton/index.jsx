@@ -6,10 +6,10 @@ const ReusableButton = ({ onClick, label, iconKey, className, isDisabled }) => {
       <button
         disabled={isDisabled}
         onClick={onClick}
-        className={`penta-button ${className}`}
+        className={className}
         title={label}
       >
-        {iconKey && <ReactSVG src={iconKey} />}
+        {iconKey && <ReactSVG src={iconKey} alt={label} />}
         <label>{label}</label>
       </button>
     );
