@@ -1,4 +1,12 @@
 .app-container{
-    display:flex;
-    height:100vh;
+    display: flex;
+    height: 100vh;
+    margin: 3% 6%;
+}
+.cart{
+    min-width: 25%;
+}
+
+.product-list {
+    margin: 0px 20px
 }
