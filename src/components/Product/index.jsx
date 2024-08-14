@@ -13,16 +13,16 @@ const Product = ({image, name, category, price}) => {
                 <img src={image.thumbnail} alt={name} className="product-image" />
             </picture>
                 <ReusableButton
+                    iconKey="/assets/images/icon-add-to-cart.svg"
                     onClick={() => { }}
                     label="Add to Cart"
                     className="add-to-cart-button"
                 />    
-                <button title="Add to Cart" className="add-to-cart-button">Add to Cart</button>
         </div>
         <div className="product-body">
-            <p className="product-category">{category}</p>
-            <p className="product-name">{name}</p>
-            <p className="product-price">{ `$ ${price}`}</p>
+            <span className="product-category">{category}</span>
+            <span className="product-name">{name}</span>
+            <span className="product-price">{ `$ ${price}`}</span>
     
             </div>
         </>
