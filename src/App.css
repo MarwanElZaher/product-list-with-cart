@@ -10,3 +10,6 @@
 .product-list {
     margin: 0px 20px
 }
+button {
+    cursor: pointer;
+}
