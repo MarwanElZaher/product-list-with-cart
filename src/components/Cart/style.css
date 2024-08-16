@@ -12,10 +12,11 @@ color: #c73b0f;
 .cart-total{
     display: flex;
     justify-content: space-between;
-    margin: 4px;
+    margin: 6px;
+    padding: 15px 0px;
 }
 .cart-total-label {
-    font-size:12px;
+    font-size:14px;
 }
 .cart-total-value {
     font-weight: 800;
@@ -32,21 +33,28 @@ color: #c73b0f;
     background-color: #e5e5e58f;
     padding: 10px;
     border-radius: 5px;
+    margin: 10px;
 }
 .delivery-description {
     margin: 0px;
     padding: 0px 5px;
+    font-size: 13px;
 }
 .delivery-description span {
     font-weight: 500;
 }
 .confirm-order-button{
+    width: 95%;
     margin-top: 10px;
-    padding: 10px 95px;
+    padding: 15px 10px;
     border-radius: 25px;
     background-color: #c73b0f;
-    color: white;
+    color: #fbd8d8;
     font-weight: 600;
+    border: unset;
+}
+.confirm-order-button:hover {
+
 }
 .empty-cart {
     display: flex;
