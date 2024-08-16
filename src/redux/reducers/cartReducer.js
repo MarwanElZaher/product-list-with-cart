@@ -1,27 +1,61 @@
-
-import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_CART } from '../actions/cartActions';
+import { INCREMENT_ITEM, REMOVE_FROM_CART, CLEAR_CART, DECREMENT_ITEM } from '../actions/cartActions';
 
 const initialState = {
-    items: [],
+    items: {},
 };
 
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_TO_CART:
+        case INCREMENT_ITEM: {
+            const currentQuantity = state.items[action.payload] || 0;
+
             return {
                 ...state,
-                items: [...state.items, action.payload],
+                items: {
+                    ...state.items,
+                    [action.payload]: currentQuantity + 1,
+                },
             };
-        case REMOVE_FROM_CART:
+        }
+        case DECREMENT_ITEM: {
+            const itemName = action.payload;
+            const currentQuantity = state.items[itemName] || 0;
+        
+            if (currentQuantity > 0) {
+                const newQuantity = currentQuantity - 1;
+        
+                const updatedItems = { ...state.items };
+        
+                if (newQuantity > 0) {
+                    updatedItems[itemName] = newQuantity;
+                } else {
+                    delete updatedItems[itemName];
+                }
+        
+                return {
+                    ...state,
+                    items: updatedItems,
+                };
+            }
+        
+            return state;
+        }
+
+        case REMOVE_FROM_CART: {
+            const { [action.payload]: _, ...restItems } = state.items;
             return {
                 ...state,
-                items: state.items.filter(item => item.id !== action.payload),
+                items: restItems,
             };
+        }
+        
+
         case CLEAR_CART:
             return {
                 ...state,
-                items: [],
+                items: {},
             };
+
         default:
             return state;
     }
