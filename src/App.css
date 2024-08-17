@@ -13,3 +13,38 @@
 button {
     cursor: pointer;
 }
+
+
+/* Media Query for Mobile Devices (375px or smaller) */
+@media only screen and (max-width: 375px) {
+    .app-container {
+        flex-direction: column;
+        margin: 2% 4%; 
+    }
+
+    .cart {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-list {
+        margin: 0px;
+    }
+}
+
+/* Media Query for Tablets (768px and smaller) */
+@media only screen and (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        margin: 2% 4%;
+    }
+
+    .cart {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-list {
+        margin: 0px 10px;
+    }
+}
