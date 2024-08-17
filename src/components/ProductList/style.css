@@ -11,3 +11,11 @@
   font-size: 30px;
   padding: 10px
 }
+
+@media only screen and (max-width: 768px) {
+  .products-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+}
