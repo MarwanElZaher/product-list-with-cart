@@ -1,9 +1,11 @@
 import './App.css';
 import Cart from './components/Cart';
+import OrderModal from './components/OrderModal';
 import ProductList from './components/ProductList';
 
 function App() {
   return (
+    
     <div className="app-container">
       <main className="product-list">
         <ProductList />
@@ -11,7 +13,9 @@ function App() {
       <aside className="cart">
         <Cart />
       </aside>
+      <OrderModal />
     </div>
+      
   );
 }
 
