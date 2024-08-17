@@ -25,7 +25,7 @@ const Product = ({ image, name, category, price }) => {
                 {cartItems[name] ?
                     <Counter productName={name}/> :
                     <ReusableButton
-                    iconKey="/assets/images/icon-add-to-cart.svg"
+                    iconKey={`${process.env.PUBLIC_URL}/assets/images/icon-add-to-cart.svg`}
                     onClick={handleAddingProductToCart }
                     label="Add to Cart"
                     className="add-to-cart-button"

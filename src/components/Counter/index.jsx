@@ -17,9 +17,9 @@ const Counter = ({ productName }) => {
     }
     return (
         <div className="counter-main-component">
-            <ReusableButton label={`Add 1 more "${productName}" in cart`}  iconKey="/assets/images/icon-increment-quantity.svg" className="increment-quantity-button" onClick={handleProductIncrement}/>
+            <ReusableButton label={`Add 1 more "${productName}" in cart`} iconKey={`${process.env.PUBLIC_URL}/assets/images/icon-increment-quantity.svg`} className="increment-quantity-button" onClick={handleProductIncrement}/>
             <span className="product-added-quantity">{cartItems?.[productName]}</span>
-            <ReusableButton label={`Remove 1 ${productName} from cart`} iconKey="/assets/images/icon-decrement-quantity.svg" className="decrement-quantity-button" onClick={handleProductDecrement}/>
+            <ReusableButton label={`Remove 1 ${productName} from cart`} iconKey={`${process.env.PUBLIC_URL}/assets/images/icon-decrement-quantity.svg`} className="decrement-quantity-button" onClick={handleProductDecrement}/>
         </div>
     )
 }

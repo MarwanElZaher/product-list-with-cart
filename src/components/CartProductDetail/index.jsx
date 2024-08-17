@@ -27,7 +27,7 @@ const CartProductDetail = ({ priceMap, cartItems, totalPrice, showProductImage, 
                                 <img src={getImageForItem(productName)} alt={ productName} />
                         </div>
                             :
-                        <ReusableButton iconKey="/assets/images/icon-remove-item.svg" className="remove-product-cart" label={`Remove ${productName}`} onClick={() => dispatch(removeFromCart(productName))} />
+                            <ReusableButton iconKey={`${process.env.PUBLIC_URL}/assets/images/icon-remove-item.svg`} className="remove-product-cart" label={`Remove ${productName}`} onClick={() => dispatch(removeFromCart(productName))} />
                           
                         }
                     </div>

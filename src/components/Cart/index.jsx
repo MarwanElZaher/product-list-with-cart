@@ -40,7 +40,7 @@ const Cart = () => {
                    
                 </div>
                 <div className="delivery-slogan">
-                    <ReactSVG src='/assets/images/icon-carbon-neutral.svg' alt="icon-carbon-neutral-icon" />
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/assets/images/icon-carbon-neutral.svg`} alt="icon-carbon-neutral-icon" />
                     <p className="delivery-description">
                         This is a <span>carbon-neutral</span> delivery
                     </p>
@@ -51,7 +51,7 @@ const Cart = () => {
                 </div>
                 </> :
                 <div className="empty-cart">
-                    <ReactSVG src="/assets/images/illustration-empty-cart.svg" alt="illustration-empty-cart" />
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/assets/images/illustration-empty-cart.svg`} alt="illustration-empty-cart" />
                     <p className="empty-cart-msg">Your added items would appear here</p>
                 </div>
             }

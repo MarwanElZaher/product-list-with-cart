@@ -28,7 +28,7 @@ const OrderModal = () => {
         <Modal isOpen={isModalOpen} onClose={handleClose} orderDetails={orderDetails}>
             {orderDetails && (
                 <div className='checkout-modal'>
-                    <ReactSVG src='/assets/images/icon-order-confirmed.svg' alt="icon-order-confirmed" />
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/assets/images/icon-order-confirmed.svg`} alt="icon-order-confirmed" />
                     <h2>Order Confirmed</h2>
                     <p>We hope you enjoyed your food!</p>
                     <div className='product-details-modal'>
