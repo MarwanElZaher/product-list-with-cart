@@ -1,13 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import './style.css'
 import ReusableButton from "../ReusableButton";
 import { ReactSVG } from "react-svg";
 import { data } from '../../constants'
 import CartProductDetail from "../CartProductDetail";
+import { showModal } from "../../redux/actions/modalActions";
 
 const Cart = () => {
-    const cartItems = useSelector((state) => state.cart.items)
+    const dispatch = useDispatch();
+    const cartItems = useSelector((state) => state.cart.items);
 
     const priceMap = data.reduce((acc, item) => {
         acc[item.name] = item.price;
@@ -22,6 +24,10 @@ const Cart = () => {
     }, 0).toFixed(2);
 
 
+    const handleModalView = (priceMap, cartItems, totalPrice) => {
+        dispatch(showModal({priceMap, cartItems, totalPrice}))
+    }
+
     return (
         <div className="cart-main-container">
         <div className="cart-header">
@@ -30,15 +36,8 @@ const Cart = () => {
             {totalQuantity > 0 ?
              <>
                 <div className="cart-body">
-                     <CartProductDetail priceMap={priceMap} cartItems={cartItems} />        
-                    <div className="cart-total">
-                        <div className="cart-total-label">
-                                Order Total
-                        </div>
-                        <div className="cart-total-value">
-                                {`$ ${totalPrice}`}
-                        </div>
-                    </div>
+                     <CartProductDetail priceMap={priceMap} cartItems={cartItems} totalPrice={totalPrice} />        
+                   
                 </div>
                 <div className="delivery-slogan">
                     <ReactSVG src='/assets/images/icon-carbon-neutral.svg' alt="icon-carbon-neutral-icon" />
@@ -48,7 +47,7 @@ const Cart = () => {
                 </div>    
                  <div className="cart-footer">
 
-                  <ReusableButton label="Confirm Order" className="confirm-order-button"/>
+                  <ReusableButton label="Confirm Order" className="confirm-order-button" onClick={()=>handleModalView(priceMap, cartItems, totalPrice)}/>
                 </div>
                 </> :
                 <div className="empty-cart">
