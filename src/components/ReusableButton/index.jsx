@@ -1,7 +1,6 @@
 import React from "react";
-import { ReactSVG } from "react-svg";
 
-const ReusableButton = ({ onClick, label, iconKey, className, isDisabled }) => {
+const ReusableButton = ({ onClick, label, child, className, isDisabled }) => {
     return (
       <button
         disabled={isDisabled}
@@ -9,16 +8,8 @@ const ReusableButton = ({ onClick, label, iconKey, className, isDisabled }) => {
         className={className}
         title={label}
       >
-      {iconKey && (
-        <ReactSVG
-          src={iconKey}
-          beforeInjection={(svg) => {
-            svg.setAttribute('role', 'img');
-            svg.setAttribute('aria-label', label);
-          }}
-        />
-        )}
-        <label>{label}</label>
+        {child && child}
+        <span>{label}</span>
       </button>
     );
   };
