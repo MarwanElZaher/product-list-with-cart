@@ -7,7 +7,7 @@ const ProductList = () => {
     <>
         <p className="category">Desserts</p>
         
-        <div className="products-container">
+        <ul className="products-container">
             {data?.map(product => (
                 <li
                     className="product"
@@ -21,7 +21,7 @@ const ProductList = () => {
                     />
                 </li>
         )) }
-            </div>
+            </ul>
          </>
     )
 }
