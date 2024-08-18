@@ -8,6 +8,9 @@ function App() {
     
     <div className="app-container">
       <main className="product-list">
+        <header className="App-header">
+          <p className="category">Desserts</p>
+        </header>
         <ProductList />
       </main>
       <aside className="cart">
