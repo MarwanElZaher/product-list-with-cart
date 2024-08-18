@@ -9,7 +9,15 @@ const ReusableButton = ({ onClick, label, iconKey, className, isDisabled }) => {
         className={className}
         title={label}
       >
-        {iconKey && <ReactSVG src={iconKey} alt={label} />}
+      {iconKey && (
+        <ReactSVG
+          src={iconKey}
+          beforeInjection={(svg) => {
+            svg.setAttribute('role', 'img');
+            svg.setAttribute('aria-label', label);
+          }}
+        />
+        )}
         <label>{label}</label>
       </button>
     );
