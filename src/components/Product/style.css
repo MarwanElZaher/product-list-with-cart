@@ -31,7 +31,7 @@
     border: 1px solid #c73b0f;
 }
 
-.add-to-cart-button label {
+.add-to-cart-button span {
     font-weight: bold;
     padding: 2px 4px;
     cursor: pointer;

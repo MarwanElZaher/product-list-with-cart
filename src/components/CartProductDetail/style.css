@@ -42,7 +42,7 @@
     border: unset;
     background-color: transparent;
 }
-.remove-product-cart label{
+.remove-product-cart span{
     display: none;
     border: unset;
     background-color: transparent;
